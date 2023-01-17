@@ -1,10 +1,16 @@
 <template>
   <div id="app">
-    <nyj-button type="primary" icon="help">测试按钮</nyj-button>
+    <!-- <nyj-button type="primary" icon="help">测试按钮</nyj-button>
     <nyj-button type="info" icon="help" circle @click="handleClick"></nyj-button>
-    <nyj-button type="warning" disabled @click="handleClick">测试按钮</nyj-button>
+    <nyj-button type="warning" disabled @click="handleClick">测试按钮</nyj-button> -->
+    <!-- <nyj-radio label="男" v-model="gender"></nyj-radio>
+    <nyj-radio label="女" v-model="gender"></nyj-radio> -->
 
-    <i class="nyj-icon nyj-icon-help"></i>
+    <!-- <nyj-radio-group v-model="gender">
+      <nyj-radio label="男"></nyj-radio>
+      <nyj-radio label="女"></nyj-radio>
+    </nyj-radio-group> -->
+    <nyj-input clearable v-model="gender"></nyj-input>
   </div>
 </template>
 
@@ -16,6 +22,11 @@ export default {
   // components: {
   //   HelloWorld
   // }
+  data () {
+    return {
+      gender: '女'
+    }
+  },
   methods: {
     handleClick () {
       console.log('123')
